@@ -1,15 +1,7 @@
 import java.util.*;
 import interfacePackage.*;
 
-/**
- * Desert aligned to provided interfaces:
- * - CellInterface.receiveRat(RatInterface) -> int[]{row,col}
- * - CellInterface.retrieveRat(String id) -> RatInterface
- * - CellInterface.getCellType() -> char
- * - HoleInterface extends CellInterface (if rat escapes, later retrieveRat(id) returns null)
- * - RatInterface.move() -> String ("N","NE","E","SE","S","SW","W","NW")
- * - RatInterface.getAliveState() -> int (0 alive, 1 lost/dead, -1 finished)
- */
+
 class Desert implements DesertInterface {
     private final Random RNG = new Random();
     private CellInterface[][] grid;
@@ -82,7 +74,7 @@ class Desert implements DesertInterface {
         return r >= 0 && r < rows && c >= 0 && c < cols;
     }
 
-    // --- DesertInterface ---
+
 
     @Override
     public RatStatusInterface startRat() {

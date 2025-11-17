@@ -35,7 +35,7 @@ class Hole extends Cell implements HoleInterface {
             return dest.receiveRat(pRat);
         }
 
-        // STAY here: use base Cell's terrain effect (wearDown/refresh)
+       
         return super.receiveRat(pRat);
     }
 

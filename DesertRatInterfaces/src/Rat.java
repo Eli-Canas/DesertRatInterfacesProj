@@ -42,5 +42,5 @@ class Rat implements RatInterface {
         return id;
     }
 
-    // Note: no setAliveState(...) here, since the interface doesn't declare it.
+   
 }
